@@ -6,7 +6,7 @@ services:
     depends_on:
       - swetrix-api
     ports:
-      - '3000:3000'
+      - '3000'
     environment:
       - API_URL=${API_URL}
     healthcheck:
@@ -20,7 +20,7 @@ services:
     restart: always
     container_name: swetrix-api
     ports:
-      - '8080:5005'
+      - '5005'
     environment:
       # Configurable with .env file
       - JWT_ACCESS_TOKEN_SECRET=${JWT_ACCESS_TOKEN_SECRET}
